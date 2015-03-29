@@ -1,0 +1,98 @@
+*{
+	margin: 0;
+	font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+}
+
+h2 {
+	position: absolute;
+	padding: 20px
+}
+
+#container{
+	position: absolute;
+	width: 70%;
+	left: 15%;
+	top: 20%
+}
+
+.area_description {
+	position: absolute;
+	right: 20%;
+	font-weight: bold;
+}
+
+#areaA{
+	position: absolute;
+	float:left;
+	width: 10%;
+	top: 0;
+	left: 0%;
+	border-right-style: solid;
+	border-right-width: 1;
+	border-right-color: #3366CC;
+	cursor: pointer;
+}
+
+#areaB{
+	position: absolute;
+	float:left;
+	width: 25%;
+	top: 0;
+	left: 10%;
+	border-right-style: solid;
+	border-right-width: 1;
+	border-right-color: #3366CC;
+	cursor: pointer;
+}
+
+#areaC{
+	position: absolute;
+	float:left;
+	width: 25%;
+	top: 0;
+	left: 35%;
+	border-right-style: solid;
+	border-right-width: 1;
+	border-right-color: #3366CC;
+	cursor: pointer;
+}
+
+#areaD{
+	position: absolute;
+	float:left;
+	width: 45%;
+	top: 0;
+	left: 60%;
+	cursor: pointer;
+}
+
+#areaA p {
+	top: 10%
+}
+
+#areaB p {
+	top: 30%
+}
+
+#areaC p {
+	top: 50%
+}
+
+#areaD p {
+	top: 70%
+}
+
+#xaxis {
+	position: absolute;
+	right: 0%;
+	bottom: -5%;
+}
+
+#yaxis {
+	position: absolute;
+	left: 0%;
+	top: -5%;
+}
