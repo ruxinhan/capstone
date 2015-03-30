@@ -6,6 +6,7 @@
 		margin: auto;
 		position: relative;
 		width: 960px;
+		
 	}
 
 	form {
@@ -16,11 +17,13 @@
 
 	.node {
 		border: solid 1px white;
-		font: 10px sans-serif;
-		line-height: 12px;
+		font: 12px sans-serif;
+		line-height: 50px;
 		overflow: hidden;
 		position: absolute;
-		text-indent: 2px;
+		text-indent: 4px;
+		color: white;
+		text-align:center;
 	}
 
 </style>
@@ -35,7 +38,6 @@
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
 	// Reading parameter in ***********
-	var params = {};
 	var area = "";
 	if (location.search) {
 		var parts = location.search.substring(1);
@@ -59,6 +61,7 @@
 
 	// ****** Modified here ***** //
 	var filename = "data/flare_" + area + ".json";
+	//var filename = "data/concept_info_list.json";
 	alert(filename);
 	//*******************************
 	
