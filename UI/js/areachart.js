@@ -24,7 +24,8 @@ function renderChart() {
 	$("#areaB").css("height", canvas.height);
 	$("#areaC").css("height", canvas.height);
 	$("#areaD").css("height", canvas.height);
-
+	$("#chart").css("height", 1.2 * canvas.height);
+	
 	// Data
 	var data = {
 		labels : numArray,
@@ -63,7 +64,7 @@ $(document).ready(function() {
 		$("#areaA").css("background-color", "transparent");
 		$("#areaA").css("opacity", "1");
 	}).click(function(event) {
-		window.location = "treemap.html?area=1";
+		window.location = "index.html?area=1";
 	});
 
 	$("#areaB").mouseover(function(event) {
@@ -75,7 +76,7 @@ $(document).ready(function() {
 		$("#areaB").css("background-color", "transparent");
 		$("#areaB").css("opacity", "1");
 	}).click(function(event) {
-		window.location = "treemap.html?area=2";
+		window.location = "index.html?area=2";
 	});
 
 	$("#areaC").mouseover(function(event) {
@@ -87,7 +88,7 @@ $(document).ready(function() {
 		$("#areaC").css("background-color", "transparent");
 		$("#areaC").css("opacity", "1");
 	}).click(function(event) {
-		window.location = "treemap.html?area=3";
+		window.location = "index.html?area=3";
 	});
 
 	$("#areaD").mouseover(function(event) {
@@ -99,7 +100,7 @@ $(document).ready(function() {
 		$("#areaD").css("background-color", "transparent");
 		$("#areaD").css("opacity", "1");
 	}).click(function(event) {
-		window.location = "treemap.html?area=4";
+		window.location = "index.html?area=4";
 	});
 });
 
