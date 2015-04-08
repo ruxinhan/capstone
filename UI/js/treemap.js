@@ -8,7 +8,7 @@ $(document).ready(function() {
 		var parts = location.search.substring(1);
 		area = parts.split("=")[1];
 	}
-	var filename = "data/flare_" + area + ".json";
+	var filename = "data/treemap_" + area + ".json";
 	//***********************************
 
 	$.getJSON(filename, function(data) {
@@ -17,7 +17,7 @@ $(document).ready(function() {
    		.data(data)
     	.type("tree_map")
     	.id("name")
-    	.size("size")
+    	.size("tf-idf")
     	.font({ "family": "Times" })
     	.color(function(d){
     		return d.growth > 0 ? "#008800" : "#B8DBFF";
@@ -27,7 +27,9 @@ $(document).ready(function() {
 
 
 	$("#treemap").click(function(event) {
-		alert(event.target.__data__.name);
+		if (event.target.__data__.name !== "d3plus_other" && event.target.__data__.name !== "undefined") {
+			window.location = "network.html?term=" + event.target.__data__.name;
+		}
 	});
 
 });

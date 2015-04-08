@@ -1,75 +1,24 @@
 <!doctype html>
 <meta charset="utf-8">
+<html>
+	<head>
+		<title>TANA Concept Browser</title>
+		<link rel="stylesheet"  href="css/main.css"/>
+		<script src="http://www.d3plus.org/js/d3.js"></script>
+		<script src="http://www.d3plus.org/js/d3plus.js"></script>
+		<script src="js/jquery.js"></script>
+		<script src="js/network.js"></script>
+	</head>
 
-<!-- load D3js -->
-<script src="http://www.d3plus.org/js/d3.js"></script>
+	<body>
+		<a href="index.html" id="home">Home</a>
+		<!-- create container element for visualization -->
+		<div id="history_div">
+			<h5>History:</h5>
+			<ul id="history"></ul>
+		</div>
+		<div id="network"></div>
+	</body>
 
-<!-- load D3plus after D3js -->
-<script src="js/d3plus.js"></script>
-<script src="js/jquery.js"></script>
+</html>
 
-<!-- create container element for visualization -->
-<div id="viz"></div>
-
-<script>
-
-  // create sample dataset
-  var sample_data = [
-    {"name": "center", "size": 20},
-    {"name": "alpha", "size": 9},
-    {"name": "beta", "size": 8},
-    {"name": "gamma", "size": 7},
-    {"name": "delta", "size": 6},
-    {"name": "epsilon", "size": 5},
-    {"name": "zeta", "size": 4},
-    {"name": "theta", "size": 3},
-    {"name": "eta", "size": 2}
-  ];
-
-  //sample_data[9].visible = false
-
-  // create list of node positions
-  var positions = [
-    {"name": "center", "x": 40, "y": 20},
-    {"name": "alpha", "x": 60, "y": 20},
-    {"name": "beta", "x": 54, "y": 6},
-    {"name": "gamma", "x": 40, "y": 0},
-    {"name": "delta", "x": 26, "y": 6},
-    {"name": "epsilon", "x": 20, "y": 20},
-    {"name": "zeta", "x": 26, "y": 34},
-    {"name": "theta", "x": 40, "y": 40},
-    {"name": "eta", "x": 54, "y": 34}
-    //{"name": "eta", "x": 24, "y": 11} 
-  ];
-
-  // create list of node connections
-  var connections = [
-    {"source": "center", "target": "alpha"},
-    {"source": "center", "target": "beta"},
-    {"source": "center", "target": "gamma"},
-    {"source": "center", "target": "delta"},
-    {"source": "center", "target": "epsilon"},
-    {"source": "center", "target": "zeta"},
-    {"source": "center", "target": "theta"},
-    {"source": "center", "target": "eta"}
-  ];
-
-  // instantiate d3plus
-  var visualization = d3plus.viz()
-    .container("#viz")  // container DIV to hold the visualization
-    .type("network")    // visualization type
-    .data(sample_data)  // sample dataset to attach to nodes
-    .nodes(positions)   // x and y position of nodes
-    .edges(connections) // list of node connections
-    .size("size")       // key to size the nodes
-    .id("name")         // key for which our data is unique on
-    .color(function(d){
-      return d.growth > 0 ? "#008800" : "#B8DBFF";
-    })
-    .draw();             // finally, draw the visualization!
-	
-	$("#viz").click(function(event) {
-		alert(event.target.__data__.name);
-		window.location = "index.html";
-	});
-</script>

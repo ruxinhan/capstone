@@ -1,9 +1,9 @@
-*{
+* {
 	margin: 0;
-	font-family:Arial,Helvetica,sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
+body {
 }
 
 h2 {
@@ -11,11 +11,11 @@ h2 {
 	padding: 20px
 }
 
-#container{
+#container {
 	position: absolute;
 	width: 90%;
 	left: 5%;
-	top: 15%
+	top: 13%
 }
 
 .area_description {
@@ -24,9 +24,9 @@ h2 {
 	font-weight: bold;
 }
 
-#areaA{
+#areaA {
 	position: absolute;
-	float:left;
+	float: left;
 	width: 10%;
 	top: 0;
 	left: 0%;
@@ -36,9 +36,9 @@ h2 {
 	cursor: pointer;
 }
 
-#areaB{
+#areaB {
 	position: absolute;
-	float:left;
+	float: left;
 	width: 25%;
 	top: 0;
 	left: 10%;
@@ -48,9 +48,9 @@ h2 {
 	cursor: pointer;
 }
 
-#areaC{
+#areaC {
 	position: absolute;
-	float:left;
+	float: left;
 	width: 25%;
 	top: 0;
 	left: 35%;
@@ -60,9 +60,9 @@ h2 {
 	cursor: pointer;
 }
 
-#areaD{
+#areaD {
 	position: absolute;
-	float:left;
+	float: left;
 	width: 45%;
 	top: 0;
 	left: 60%;
@@ -99,6 +99,59 @@ h2 {
 
 #treemap {
 	position: relative;
+	width: 100%;
 	left: 0%;
-	top: 0%;
+	top: -5%;
+}
+
+ul#history {
+	position:relative;
+	top: 10px;
+	left: 20px;
+	padding: 0;
+	z-index: 1;
+}
+
+ul#history li {
+	margin-bottom: 10px;
+	display: inline;
+	line-height: 250%;
+}
+
+ul#history li a {
+	background-color:#B8DBFF;
+	color: grey;
+	padding: 10px 20px;
+	text-decoration: none;
+	border-radius: 4px 4px 0 0;
+}
+
+ul#history li a:hover {
+	background-color: #99CCFF;
+	cursor: pointer;
+}
+
+#network {
+	position:relative;
+	top: 0px;
+	width: 50%;
+}
+
+#history_div {
+	position:relative;
+	top:10px;
+	left: 10px;
+}
+
+#home {
+	position: absolute;
+	top:10px;
+	right:50px;
+	text-decoration:underline;
+	color:blue;
+	z-index: 1;
+}
+
+#home:hover{
+	cursor: pointer;
 }
